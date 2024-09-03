@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quick Notes</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      width: 300px;
+      min-height: 400px;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      background-color: #fffde5;
+    }
+    .note-square {
+      width: 100px;
+      height: 60px;
+      margin: 5px;
+      display: inline-block;
+      background-color: #FFFF8F;
+      color: black;
+      text-align: center;
+      line-height: 60px;
+      cursor: pointer;
+      border-radius: 5px;
+      overflow: hidden;
+      border: 1px dashed #ff5733;
+    }
+    .note-square:hover {
+      background-color: #fffbcc;
+    }
+    #noteArea {
+      width: calc(100% - 20px);
+      height: 200px;
+      margin: 10px;
+      background-color: #FFFF8F;
+      border: 1px dashed #ff5733;
+    }
+    #statusMessage {
+      color: green;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    #statusMessage2 {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    .note-name {
+      font-size: 12px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    #storageMeter {
+      font-size: 12px;
+      margin-top: 10px;
+    }
+    #storageWrapper {
+      height: 12px;
+      width: 100%;
+      background-color: #fffde5; 
+      border: 1px solid #ff5733; 
+      margin-bottom: 10px;
+      position: relative; 
+    }
+
+    #storageBar {
+      height: 100%;
+      background-color: #007bff; 
+      width: 0;
+      transition: width 0.3s; 
+      position: absolute; 
+      top: 0;
+      left: 0; 
+    }
+    #noteName {
+      background-color: #FFFF8F; 
+      color: #000000; 
+      border: 1px solid #cccccc; 
+      border-radius: 4px; 
+      padding: 5px; 
+      border: 1px dashed #ff5733;
+    }
+    .centered {
+      text-align: center;
+      margin-bottom: 20px; 
+    }
+    .bordered-image {
+      border: 2px solid #ff5733;
+      border-radius: 10px; 
+      margin-right: 20px; 
+    }
+    #saveBtn {
+      background-color: #b7d47e; 
+      color: black;
+      border: 1px dashed #ff5733; 
+      margin-right: 15px;
+    }
+    #saveBtn:hover {
+      background-color: #dbe9be; 
+      border-color: #ff5733; 
+    }
+    #deleteBtn {
+      background-color: #f28678; 
+      color: black; 
+      border: 1px dashed #ff5733; 
+    }
+    #deleteBtn:hover {
+      background-color: #f8c2bb;
+      border-color: #ff5733; 
+    }
+    .justify-between {
+      justify-content: space-between; 
+      width: 100%;
+    }
+    .link {
+      text-decoration: none; /* Remove underline */
+      color: #007bff; /* Link color */
+    }
+
+    .link:hover {
+      text-decoration: underline; /* Underline on hover */
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="centered">
+      <img src="icons/icon16.png" width="150" height="150" alt="Quick Notes" class="bordered-image">
+    </div>
+    <input type="text" id="noteName" class="form-control mb-2" placeholder="Note name">
+    <textarea id="noteArea" class="form-control" placeholder="Write here..."></textarea>
+    <div class="d-flex justify-between">
+      <button id="saveBtn" class="saveBtn">Save Note</button>
+      <button id="deleteBtn" class="deleteBtn">Delete Note</button>
+    </div>
+    <div id="statusMessage" class="mt-2"></div>
+    <div id="statusMessage2" class="mt-2"></div>
+    <div id="storageMeter" class="mt-3"></div>
+    <div id="storageWrapper">
+      <div id="storageBar"></div>
+    </div>
+    
+    <h5 class="mt-1">Saved Quick Notes: </h5>
+    <div id="noteMenu" class="mb-3"></div>
+    <h6>Made by: </h6>
+    <h6><a href="https://juanbunes.github.io/" target="_blank" rel="noopener noreferrer" class="link">Juan Bu&ntilde;es</a></h6>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
