@@ -1,3 +1,6 @@
+![image](https://github.com/user-attachments/assets/f542850d-ea44-427b-ab23-901b075feeac)
+
+
 Quick Notes is a simple and convenient Chrome extension that allows you to create, save, and manage multiple notes directly within your browser. The extension features a user-friendly interface that resembles post-it notes, making it easy to jot down quick thoughts, reminders, or tasks.
 
 Features:
