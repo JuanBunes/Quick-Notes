@@ -13,7 +13,7 @@ Storage Meter: Keep track of how much of the 100KB storage limit you've used wit
 
 How to Install Quick Notes
 
-1) Download the Extension
+1) Download the Extension from the releases page.
 2) Save all the extension files into a single folder on your computer.
 3) Open Chrome and navigate to chrome://extensions/.
 4) Enable "Developer mode" by toggling the switch in the upper right corner.
